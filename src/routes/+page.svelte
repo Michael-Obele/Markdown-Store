@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { onMount } from 'svelte';
+	import { themeChange } from 'theme-change';
+
+	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
+	onMount(() => {
+		themeChange(false);
+		// 👆 false parameter is required for svelte
+	});
+</script>
+
+<button class="btn">Some Text</button>
+
+<select data-choose-theme>
+	<option value="light">Light</option>
+	<option value="dark">Dark</option>
+	<option value="black">Black</option>
+</select>
