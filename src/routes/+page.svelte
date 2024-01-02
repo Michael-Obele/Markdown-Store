@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
+	import Navbar from '$lib/components/navbar.svelte';
 
 	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
 	onMount(() => {
@@ -9,10 +10,6 @@
 	});
 </script>
 
-<button class="btn">Some Text</button>
+<Navbar />
 
-<select data-choose-theme>
-	<option value="light">Light</option>
-	<option value="dark">Dark</option>
-	<option value="black">Black</option>
-</select>
+<button class="btn">Some Text</button>
